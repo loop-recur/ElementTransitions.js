@@ -1,7 +1,7 @@
-/*
-  elementTransitions.js
-*/
-var PageTransitions = (function($) {
+define([
+  'jquery'
+] , function($) {
+
   var startElement = 0,
   animEndEventNames = {
     'WebkitAnimation': 'webkitAnimationEnd',
@@ -113,13 +113,10 @@ var PageTransitions = (function($) {
     }
     return output;
   }
+
   return {
     init : init,
     nextPage: nextPage,
     animate: animate
   };
-})(jQuery);
-
-jQuery(function($) {
-  PageTransitions.init();
 });
